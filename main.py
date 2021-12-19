@@ -8,7 +8,7 @@ def determine():
             pow_sq = int(pow_value.get()) / int(res_value.get())
             cur = round(math.sqrt(pow_sq))
             if int(cur_value.get()) > cur:
-                #Fuse rating okay
+                #Fuse rating is okay
                 val = Label(app,text="Fuse is usable", font=("italic",16),foreground="orange",padx=0,pady=15)
                 val.grid(row=11,column=2,sticky=W)
             else:
