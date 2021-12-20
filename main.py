@@ -7,10 +7,13 @@ def determine():
         if isinstance(int(cur_value.get()),int) and isinstance(int(res_value.get()),int) and isinstance(int(pow_value.get()),int):
             pow_sq = int(pow_value.get()) / int(res_value.get())
             cur = round(math.sqrt(pow_sq))
-            if int(cur_value.get()) > cur:
-                #Fuse rating is okay
+            if int(cur_value.get()) > cur or int(cur_value.get()) == cur:
+                #Fuse rating okay
                 val = Label(app,text="Fuse is usable", font=("italic",16),foreground="orange",padx=0,pady=15)
                 val.grid(row=11,column=2,sticky=W)
+                cur_input.delete(0,END)
+                pow_input.delete(0,END)
+                res_input.delete(0,END)
             else:
                 strcur = str(cur)
                 val = Label(app,text="Fuse is not usable, Use "+ strcur +" Amps or above", font=("italic",16),foreground="orange",padx=0,pady=15)
@@ -27,7 +30,7 @@ def determine():
     
 
 app = Tk()
-app.geometry("800x400")
+app.geometry("600x400")
 app.title("Fuse Viability")
 app.resizable(False,False)
 intro = Label(app, text="Feasibility Analysis", font=("bold",14),foreground="#000",padx=10,pady=5)
