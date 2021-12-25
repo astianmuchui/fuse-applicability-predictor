@@ -1,3 +1,4 @@
+#This is purely theoretical
 import tkinter
 import math
 from tkinter import *
