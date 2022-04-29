@@ -17,7 +17,7 @@ def determine():
                 res_input.delete(0,END)
             else:
                 strcur = str(cur)
-                val = Label(app,text="Fuse is not usable, Use "+ strcur +" Amps or above", font=("italic",16),foreground="orange",padx=0,pady=15)
+                val = Label(app,text="Fuse is not usable, Use "+ strcur+1 +" Amps or above", font=("italic",16),foreground="orange",padx=0,pady=15)
                 val.grid(row=11,column=2,sticky=W)
                 cur_input.delete(0,END)
                 pow_input.delete(0,END)
